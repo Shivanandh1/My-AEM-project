@@ -14,8 +14,8 @@ import com.myproject.core.services.OsgiConfigrn;
 @Designate(ocd = OsgiConfigImpl.ServiceConfig.class) 
 
 public class OsgiConfigImpl implements OsgiConfigrn {
-	@ObjectClassDefinition(name="adobe test osgi configuration",
-			description="adobe osgi config demo")
+	@ObjectClassDefinition(name="Adobe test osgi configuration",
+			description="Adobe osgi config demo")
 	
 	public @interface ServiceConfig{
 		@AttributeDefinition(
