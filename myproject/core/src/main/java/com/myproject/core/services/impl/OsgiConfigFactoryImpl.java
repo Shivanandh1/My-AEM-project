@@ -45,7 +45,7 @@ public void bindOsgiConfigFactory (final OsgiConfigFactory config){
 	allConfigsList.add(config);
 	
 }
-public void unbindOsgiConfigFactory( OsgiConfigFactory config) {
+public void unbindOsgiConfigFactory( final OsgiConfigFactory config) {
     allConfigsList.remove(config);
 }
 	@Override

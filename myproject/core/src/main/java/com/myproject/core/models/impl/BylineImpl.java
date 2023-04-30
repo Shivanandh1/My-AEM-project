@@ -45,7 +45,7 @@ import com.adobe.cq.wcm.core.components.models.Image;
         defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL
 )
 public class BylineImpl implements Byline {
-    protected static final String RESOURCE_TYPE = "wknd/components/byline";
+    protected static final String RESOURCE_TYPE = "myproject/components/byline";
 
     @Self
     private SlingHttpServletRequest request;

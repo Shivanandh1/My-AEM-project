@@ -35,7 +35,7 @@ public class OsgiConfigImpl implements OsgiConfigrn {
 			name="service data",
 			description="enter service data",
 			type=AttributeType.BOOLEAN)
-	 boolean getisData() default false;
+	 boolean isData() default false;
 	
 @AttributeDefinition(
 			
@@ -66,7 +66,7 @@ private String runmodes;
 protected void activate(ServiceConfig serviceConfig){
 	Name= serviceConfig.getName();
 	Id= serviceConfig.getId();
-	Data=serviceConfig.getisData();
+	Data=serviceConfig.isData();
 	Names=serviceConfig.getNames();
 	runmodes=serviceConfig.getRunmodes();
 			
