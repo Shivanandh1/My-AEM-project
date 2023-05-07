@@ -38,7 +38,7 @@ public class ProjectResouceTypeServlet extends SlingAllMethodsServlet {
 	@Override
 	protected void doPost( SlingHttpServletRequest req, SlingHttpServletResponse resp) throws IOException {
 		try {
-			LOG.info("-----writinf servlets");
+			LOG.info("-----writing servlets");
 			List<RequestParameter> requestParameterList= req.getRequestParameterList();
 			for(RequestParameter requestParameter:requestParameterList ) {
 				LOG.info("---parameters----",requestParameter.getName(),requestParameter.getString());

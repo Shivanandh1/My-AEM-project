@@ -32,6 +32,25 @@
                 <groupId>org.apache.sling</groupId>
                 <artifactId>sling-maven-plugin</artifactId>
             </plugin>
+            
+            <plugin>
+    <groupId>org.apache.felix</groupId>
+    <artifactId>maven-bundle-plugin</artifactId>
+    <extensions>true</extensions>
+    <configuration>
+        <instructions>
+            <_plugin>org.apache.sling.bnd.models.ModelsScannerPlugin</_plugin>
+        </instructions>
+    </configuration>
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.sling</groupId>
+            <artifactId>org.apache.sling.bnd.models</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+    </dependencies>
+</plugin>
+
             <plugin>
                 <groupId>biz.aQute.bnd</groupId>
                 <artifactId>bnd-maven-plugin</artifactId>
@@ -77,6 +96,8 @@ Import-Package: javax.annotation;version=0.0.0,*
                     </archive>
                 </configuration>
             </plugin>
+
+            
         </plugins>
     </build>
 
@@ -148,6 +169,7 @@ Import-Package: javax.annotation;version=0.0.0,*
             <groupId>javax.annotation</groupId>
             <artifactId>javax.annotation-api</artifactId>
         </dependency>
+
         <dependency>
             <groupId>org.apache.sling</groupId>
             <artifactId>org.apache.sling.servlets.annotations</artifactId>

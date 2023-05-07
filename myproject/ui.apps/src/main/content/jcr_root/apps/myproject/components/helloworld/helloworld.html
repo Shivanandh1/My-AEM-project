@@ -24,26 +24,3 @@
         <pre class="cmp-helloworld__item-output"data-cmp-hook-helloworld="model">${model.message}</pre>
     </div>
 </div>
-
-<h1> osgi configuration demo</h1>
-<div data-sly-use.osgiconfig="com.myproject.core.models.OsgiConfigmodel"></div>
-<div><p> the servicename is : <b> ${osgiconfig.Name}</b></p></div>
-<div><p> the serviceid is : <b> ${osgiconfig.Id}</b></p></div>
-<div><p> the servicecount is : <b> ${osgiconfig.Data}</b></p></div>
-<div><p> the servicename is : <b> ${osgiconfig.Names}</b></p></div>
-<div><p> the servicename is : <b> ${osgiconfig.Runmodes}</b></p></div>
-<div><b>Countries</b></div>
-<ul data-sly-list="${osgiconfig.countries}">
-    <li>${item}</li>
-</ul>
-<div data-sly-list.item="${htl.books}" >
-    <p> <b> ${item}</b></p>
-</div>
-
-<div data-sly-list.item="${htl.bookDetailMap}">
-<p>  <b>      ${item.bookname}</b></p>
-<p> <b>   ${item.booksubject}</b></p>
-</div>
-
-<div data-sly-list.item="${htl.mapbooks}" >
-<p> <b>   ${htl.mapBooks['item']}</b></p>

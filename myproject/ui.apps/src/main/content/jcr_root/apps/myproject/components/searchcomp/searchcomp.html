@@ -1,0 +1,8 @@
+
+<h1> search component </h1>
+
+<div data-sly-use.search="com.myproject.core.models.impl.SearchModelImpl"></div>
+<sly data-sly-test="${search.results}">
+    ${search.resultsJson @ context='json'}
+</sly>
+

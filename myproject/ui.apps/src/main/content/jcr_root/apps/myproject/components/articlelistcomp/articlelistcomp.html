@@ -1,0 +1,10 @@
+<h1> articlelistcomponent </h1>
+<sly data-sly-use.model="com.myproject.core.models.ArticleListModel" >
+  ${model.articleRootPath} 
+
+<sly data-sly-list.articlelist="${model.articleListBeanArray}" >
+      ${articlelist.title}
+       <br/>
+      ${articlelist.description}    
+</sly>
+</sly>

@@ -22,14 +22,14 @@ import com.day.cq.wcm.api.Page;
 import com.day.cq.wcm.api.PageManager;
 
 @Component(service =Servlet.class)
-@SlingServletPaths(value = { "/bin/pages" ,"test/pages"})
+@SlingServletPaths(value = { "/bin/pageservlet" ,"/test/pages"})
 public class ProjectPathTypeServlet extends SlingAllMethodsServlet {
 	
 	private static final Logger LOG=LoggerFactory.getLogger(ProjectPathTypeServlet.class);
 	@Override
 	protected final void doGet(final SlingHttpServletRequest req, final SlingHttpServletResponse resp) throws IOException {
-		final ResourceResolver resourceResolver=req.getResourceResolver();
-		Page page=resourceResolver.adaptTo(PageManager.class).getPage("content/myproject/us/en");
+	 final ResourceResolver resourceResolver=req.getResourceResolver();
+		Page page=resourceResolver.adaptTo(PageManager.class).getPage("/content/myproject/us/en");
 		JSONArray jsonarray=new JSONArray();
 		try {
 			Iterator<Page> childPages=page.listChildren();
@@ -40,7 +40,7 @@ public class ProjectPathTypeServlet extends SlingAllMethodsServlet {
 				jsonarray.put(pageobject);
 			}
 		}catch (Exception e) {
-			// TODO: handle exception
+		
 		LOG.info("ERROR",e.getMessage());
 		}
 		resp.setContentType("application/json");
